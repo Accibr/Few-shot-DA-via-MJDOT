@@ -196,7 +196,7 @@ for iter_num in range(1, num_iter + 1):
     classif_loss = criterion(OUTSL, y_s.squeeze())
 
 
-    total_loss = 1*classif_loss + 0.01*(JDOT_loss_m) + 10*loss_m
+    total_loss = 0.01*(JDOT_loss_m) + 10*loss_m #+ 1*classif_loss + 
 
 
     total_loss.backward()
